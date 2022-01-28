@@ -30,6 +30,7 @@ const Subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
       )
 
       let customerId = user.data.stripe_customer_id;
+      console.log(user.data)
 
       if(!customerId){
 
@@ -44,7 +45,7 @@ const Subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
                q.Ref(q.Collection('users'), user.ref.id),
                {
                   data: { 
-                     stripe_costumer_id: stripeCustomer.id,
+                     stripe_customer_id: stripeCustomer.id,
                   }
                }
             )
