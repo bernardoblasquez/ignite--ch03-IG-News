@@ -15,9 +15,9 @@ interface HomeProps {
 export default function Home({ product }:HomeProps)  {
 	return (
 		<>
-			<head>
+			<Head>
 				<title>home</title>
-			</head>
+			</Head>
 			<main className={styles.contentContainer}>
 				<section className={styles.hero}>
 					<span>Hey, Welcome</span>
